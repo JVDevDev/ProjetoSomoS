@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --pokemon-yellow: #ffca00;
+  --pokemon-blue: #2973aa;
+}
+
+.base{
+  background-color: var(--pokemon-yellow);
+  width: 100vw;
+  height: 100vh;
+}

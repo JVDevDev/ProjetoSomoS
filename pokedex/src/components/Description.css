@@ -1,0 +1,27 @@
+.description{
+  grid-area: description;
+  grid-template-areas: 
+    "image"
+    "name"
+    "type"
+    "status";
+  grid-template-rows: 1fr 20% 20% 40%;
+}
+
+.image{
+  grid-area: image;
+  align-items: center;
+}
+.name{
+  grid-area: name;
+  color: var(--pokemon-blue);
+  text-align: center;
+}
+
+.type{
+  grid-area: type;
+  background-color: var(--pokemon-blue);
+  width: 5rem;
+  height: 2rem;
+  text-align: center;
+}

@@ -1,0 +1,25 @@
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid');            
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pokemon Solid', sans-serif;                                           
+}
+
+:root{
+  --pokemon-yellow: #ffca00;
+  --pokemon-blue: #2973aa;
+  --black: #0d0d0d;
+  --white: #f3f3f3;
+}
+
+.box{
+  height: 100vh;
+  margin: auto;
+  border: 2px solid var(--black);
+  grid-template-areas: 
+    "list"
+    "description";
+  grid-template-rows: 50% 50%;
+}

@@ -1,0 +1,16 @@
+.controlPage{
+  grid-area: ControlPage;
+  background-color: var(--pokemon-blue);
+  width: 5rem;
+  height: 2rem;
+  border-radius: 3rem;
+  border: none;
+  color: var(--white);
+  margin: 0.5rem;
+}
+
+.controlPage:hover{
+  border: 1px solid var(--pokemon-blue);
+  background-color: var(--pokemon-yellow);
+  color: var(--black);
+}

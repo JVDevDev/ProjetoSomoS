@@ -1,0 +1,20 @@
+.list{
+  grid-area: list;
+  height: 49vh;
+  border-bottom: 1vh solid var(--black);
+  grid-template-areas: 
+    "logo"
+    "nav"
+    "ControlPage";
+  grid-template-rows: 20% 1fr 20%;;
+}
+
+.logo{
+  grid-area: logo;
+  color: var(--pokemon-blue);
+  font-size: x-large;
+  text-align: center;
+}
+
+
+
