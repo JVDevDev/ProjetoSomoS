@@ -1,5 +1,8 @@
-.controlPage{
+.controleTotal{
   grid-area: ControlPage;
+}
+
+.controlPage{
   background-color: var(--pokemon-blue);
   width: 5rem;
   height: 2rem;

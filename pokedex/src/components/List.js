@@ -1,6 +1,6 @@
 import './List.css';
-import ControlPage from './ControlPage'
-import Api from './Api'
+import ControlPage from './ControlPage';
+import Nav from './Nav';
 
 
 function List (){
@@ -8,8 +8,8 @@ function List (){
     <div className='list'>
       <p className='logo'>Pokemons</p>
 
-      <Api />
-      
+      <Nav />
+
       <ControlPage />
     </div>
   );

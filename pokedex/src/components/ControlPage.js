@@ -3,7 +3,7 @@ import './ControlPage.css';
 
 function List (){
   return(
-    <div>
+    <div className='controleTotal'>
       <button className='controlPage'>
         Anterior
       </button>

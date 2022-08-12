@@ -1,5 +1,6 @@
 .description{
-  grid-area: description;
+  height: 50vh;
+  border-top: 1px solid var(--black);
   grid-template-areas: 
     "image"
     "name"
@@ -24,4 +25,13 @@
   width: 5rem;
   height: 2rem;
   text-align: center;
+}
+
+@media screen and (min-width: 800px){
+  div.description{
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid var(--black);
+    border-top: none;
+  }
 }
