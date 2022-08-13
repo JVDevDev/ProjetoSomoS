@@ -1,6 +1,6 @@
 import './App.css';
-import List from './List';
-import Description from './Description'
+import List from './components/List';
+import Description from './components/Description'
 
 function App() {
   return (

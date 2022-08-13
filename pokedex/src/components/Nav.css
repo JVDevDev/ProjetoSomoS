@@ -3,3 +3,10 @@
   display: flex;
   flex-direction: column;
 }
+
+.itemList{
+  list-style: none;
+  background-color: var(--pokemon-red);
+  border: 4px solid var(--black);
+  margin: 1rem;
+}

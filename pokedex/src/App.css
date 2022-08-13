@@ -10,6 +10,7 @@
 :root{
   --pokemon-yellow: #ffca00;
   --pokemon-blue: #2973aa;
+  --pokemon-red:  #ed1b25;
   --black: #0d0d0d;
   --white: #f3f3f3;
 }
@@ -20,6 +21,7 @@
   border: 2px solid var(--black);
   display: flex;
   flex-direction: column;
+  background-color: var(--pokemon-yellow);
 }
 
 @media screen and (min-width: 800px) {
