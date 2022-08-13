@@ -1,26 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Api from '../services/Api';
 import './Nav.css';
 
 function Nav (){
-  const [name, setName] = useState([]);
+
+  
+
 
   useEffect(() => {
-    
+    const pokemons = []
     const page = 0;
-
     Api
-      .get(`?limit=10&offset=${page}`)
-      .then((res) => setName(res.data.results))
+      .get(`?limit=1&offset=${page}`)
+      .then((res) => {
+        pokemons.push(res.data.results)
+        pokemons.forEach((mostrar) => {
+          for (let i = 0; i < mostrar.length; i++) {
+            const listaDePokemons = document.querySelector("#lista");
+            listaDePokemons.innerHTML += (`<li className='itemList'>${mostrar[i].name}`);
+          }
+        });
+      })
       .catch((erro) => {
         console.log("Deu erro aqui calma: " + erro)
       })
-    
   }, [])
-  const listaPokemons = document.querySelector('#lista');
-  name.forEach(nomePokemon =>{
-    listaPokemons.innerHTML += (`<li className="itemList">${nomePokemon.name}</li>`)
-  })
+  
   
   return(
     <div id="lista" className='nav'>
