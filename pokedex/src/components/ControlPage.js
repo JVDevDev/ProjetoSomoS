@@ -1,4 +1,4 @@
-import './ControlPage.css';
+import '../styles/ControlPage.css';
 
 
 function List (){

@@ -1,4 +1,4 @@
-import './List.css';
+import '../styles/List.css';
 import ControlPage from './ControlPage';
 import Nav from './Nav';
 

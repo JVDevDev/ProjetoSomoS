@@ -7,6 +7,7 @@
 .itemList{
   list-style: none;
   background-color: var(--pokemon-red);
-  border: 4px solid var(--black);
-  margin: 1rem;
+  border: 3px solid var(--black);
+  padding-left: 1rem;
+  margin: 0.2rem;
 }
