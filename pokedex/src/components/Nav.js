@@ -1,23 +1,42 @@
-import usePages from '../hooks/usePages'
 import useAxios from '../hooks/useAxios'
+import { useState, useEffect } from 'react'
 
 import '../styles/Nav.css'
+import '../styles/ControlPage.css'
 
 function Nav() {
-  
-    
-    const { page } = usePages;
-    
+    // eslint-disable-next-line
+    const [page, setPage] = useState(0)
+    function previousPage() {
+        setPage(page - 10)
+    }
+    function nextPage() {
+        setPage(page + 10)
+    }
     const { pokemon } = useAxios(`?limit=6&offset=${page}`)
+    
 
+    useEffect(() => {
+        
+    }, [page])
     
     
 
     return (
         <div id="lista" className="nav">
-            {pokemon.map((nomes) => 
-            <button className='itemList'>{nomes.name}</button>
-            )}
+            {pokemon.map(nomes => (
+                <button className="itemList" key={nomes.name}>
+                    {nomes.name}
+                </button>
+            ))}
+            <div className="controleTotal">
+                <button className="controlPage" onClick={previousPage}>
+                    Anterior
+                </button>
+                <button className="controlPage" onClick={nextPage}>
+                    Próximo
+                </button>
+            </div>
         </div>
     )
 }

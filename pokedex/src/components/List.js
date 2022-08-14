@@ -1,18 +1,14 @@
-import '../styles/List.css';
-import ControlPage from './ControlPage';
-import Nav from './Nav';
+import '../styles/List.css'
+import '../styles/ControlPage.css'
+import Nav from './Nav'
 
-
-function List (){
-  return(
-    <div className='list'>
-      <p className='logo'>Pokemons</p>
-
-      <Nav />
-
-      <ControlPage />
-    </div>
-  );
+function List() {
+    return (
+        <div className="list">
+            <p className="logo">Pokemons</p>
+            <Nav />
+        </div>
+    )
 }
 
-export default List;
+export default List
