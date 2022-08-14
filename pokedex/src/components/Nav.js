@@ -11,19 +11,17 @@ function Nav() {
         Api.get(`?limit=5&offset=${page}`)
             .then(res => {
                 const dados = res.data.results
-                dados.map((nomes)=>{
-                  let amoreiras = nomes.name
-                  setNamePokemon(amoreiras)
-                })
+                setNamePokemon(dados.map((nomes)=>{
+                  return nomes.name
+                }))
             })
             .catch(erro => {
                 console.log('Deu erro aqui, calma: ' + erro)
             })
-            console.log({namePokemon})
         // eslint-disable-next-line
     }, [page])
 
-
+    console.log({namePokemon})
     return (
         <div id="lista" className="nav">
             <button className="itemList">pokemon 1</button>
