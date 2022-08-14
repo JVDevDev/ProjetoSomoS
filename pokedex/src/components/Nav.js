@@ -5,18 +5,24 @@ import '../styles/Nav.css'
 function Nav() {
     // eslint-disable-next-line
     const [page, setPage] = useState(10)
-    
+    const [namePokemon, setNamePokemon] = useState([]);
 
     useEffect(() => {
         Api.get(`?limit=5&offset=${page}`)
             .then(res => {
-                console.log(res.data.results)
+                const dados = res.data.results
+                dados.map((nomes)=>{
+                  let amoreiras = nomes.name
+                  setNamePokemon(amoreiras)
+                })
             })
             .catch(erro => {
                 console.log('Deu erro aqui, calma: ' + erro)
             })
+            console.log({namePokemon})
         // eslint-disable-next-line
     }, [page])
+
 
     return (
         <div id="lista" className="nav">
