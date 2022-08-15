@@ -5,13 +5,13 @@ import { PaginationContextProvider } from '../contexts/PaginationContexts'
 
 function List() {
     return (
-        <PaginationContextProvider>
-            <div className="list">
-                <p className="logo">Pokemons</p>
+        <div className="list">
+            <p className="logo">Pokemons</p>
+            <PaginationContextProvider>
                 <Nav />
                 <Pagination />
-            </div>
-        </PaginationContextProvider>
+            </PaginationContextProvider>
+        </div>
     )
 }
 
