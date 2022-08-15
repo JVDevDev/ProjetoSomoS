@@ -14,7 +14,7 @@ function Pagination({ page, setPage }) {
             let previous = document.querySelector('#previous')
             previous.disabled = false
         }
-        if (page >= 193) {
+        if (page >= 1152) {
             let previous = document.querySelector('#next')
             previous.disabled = true
         } else {
