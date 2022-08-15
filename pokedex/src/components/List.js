@@ -1,13 +1,17 @@
 import '../styles/List.css'
-import '../styles/ControlPage.css'
 import Nav from './Nav'
+import Pagination from './Pagination'
+import { PaginationContextProvider } from '../contexts/PaginationContexts'
 
 function List() {
     return (
-        <div className="list">
-            <p className="logo">Pokemons</p>
-            <Nav />
-        </div>
+        <PaginationContextProvider>
+            <div className="list">
+                <p className="logo">Pokemons</p>
+                <Nav />
+                <Pagination />
+            </div>
+        </PaginationContextProvider>
     )
 }
 

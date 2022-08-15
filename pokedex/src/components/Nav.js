@@ -1,12 +1,12 @@
 import Api from '../services/Api'
-import Pagination from './Pagination'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext} from 'react'
+import { PaginationContext } from '../contexts/PaginationContexts'
 
 import '../styles/Nav.css'
 
 function Nav() {
-    const [page, setPage] = useState(0)
     const [pokemon, setPokemon] = useState([])
+    const { page } = useContext(PaginationContext);
 
     useEffect(() => {
         const getPokemons = async () => {
@@ -27,7 +27,6 @@ function Nav() {
             {pokemon.map((pokemon) => (
                 <button className='itemList'>{pokemon.name}</button>
             ))}
-            <Pagination page={page} setPage={setPage} />
         </div>
     )
 }

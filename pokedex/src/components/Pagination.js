@@ -1,7 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
+import { PaginationContext } from '../contexts/PaginationContexts'
 import '../styles/ControlPage.css'
 
-function Pagination({ page, setPage }) {
+function Pagination() {
+    const { page, setPage } = useContext(PaginationContext)
+
     useEffect(() => {
         buttonDisabledOn()
         // eslint-disable-next-line
@@ -21,7 +24,6 @@ function Pagination({ page, setPage }) {
             let previous = document.querySelector('#next')
             previous.disabled = false
         }
-        
     }
     function previousPage() {
         if (page <= 0) {
@@ -43,14 +45,10 @@ function Pagination({ page, setPage }) {
             >
                 Anterior
             </button>
-            <button
-                id="next"
-                className="controlPage"
-                onClick={nextPage}
-            >
+            <button id="next" className="controlPage" onClick={nextPage}>
                 Próximo
             </button>
         </div>
     )
 }
-export default Pagination;
+export default Pagination
