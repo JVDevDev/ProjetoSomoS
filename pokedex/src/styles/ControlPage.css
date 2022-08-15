@@ -17,3 +17,8 @@
   background-color: var(--pokemon-yellow);
   color: var(--black);
 }
+
+.controlPage:disabled{
+  color: var(--pokemon-yellow);
+  background-color: var(--pokemon-blue);
+}
