@@ -8,9 +8,10 @@
 }
 
 :root{
-  --pokemon-yellow: #ffca00;
-  --pokemon-blue: #2973aa;
-  --pokemon-red:  #ed1b25;
+  --pokemon-yellow: #e1c03c;
+  --pokemon-blue: #2b6fa3;
+  --pokemon-red:  #bc343b;
+  --pokemon-green: #638C45;
   --black: #0d0d0d;
   --white: #f3f3f3;
 }
@@ -28,7 +29,7 @@
   div.box{
     flex-direction: row;
     justify-content: space-evenly;
-    height: 50vh;
-    width: 50vw;
+    width: 70vw;
+    height: 100vh;
   }
 }

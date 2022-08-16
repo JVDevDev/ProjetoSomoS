@@ -3,37 +3,36 @@ import { PaginationContext } from '../contexts/PaginationContexts'
 import '../styles/ControlPage.css'
 
 function Pagination() {
-    const { page, setPage } = useContext(PaginationContext)
+    const { page, setPage, limit} = useContext(PaginationContext)
 
     useEffect(() => {
+        function buttonDisabledOn() {
+            if (page <= 0) {
+                let previous = document.querySelector('#previous')
+                previous.disabled = true
+            } else {
+                let previous = document.querySelector('#previous')
+                previous.disabled = false
+            }
+            if (page >= 1152) {
+                let previous = document.querySelector('#next')
+                previous.disabled = true
+            } else {
+                let previous = document.querySelector('#next')
+                previous.disabled = false
+            }
+        }
         buttonDisabledOn()
-        // eslint-disable-next-line
-    }, [page])
-    function buttonDisabledOn() {
-        if (page <= 0) {
-            let previous = document.querySelector('#previous')
-            previous.disabled = true
-        } else {
-            let previous = document.querySelector('#previous')
-            previous.disabled = false
-        }
-        if (page >= 1152) {
-            let previous = document.querySelector('#next')
-            previous.disabled = true
-        } else {
-            let previous = document.querySelector('#next')
-            previous.disabled = false
-        }
-    }
+    }, [page, setPage, limit])
     function previousPage() {
         if (page <= 0) {
             setPage(0)
         } else {
-            setPage(page - 6)
+            setPage(page - limit)
         }
     }
     function nextPage() {
-        setPage(page + 6)
+        setPage(page + limit)
     }
 
     return (

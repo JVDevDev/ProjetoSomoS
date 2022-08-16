@@ -5,7 +5,7 @@ import { IdContextProvider } from './contexts/IdContexts'
 
 function App() {
     return (
-        <div className="box">
+        <div id='pokedex' className="box">
             <IdContextProvider>
                 <List />
                 <Description />

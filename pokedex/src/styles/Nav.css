@@ -9,6 +9,7 @@
   cursor: pointer;
   background-color: var(--pokemon-red);
   border: 3px solid var(--black);
+  border-radius: 0.2rem;
   margin: 0.3rem;
   color: var(--black);
   text-indent: 1rem;
