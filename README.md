@@ -19,7 +19,7 @@ Antes de testar ou verificar o projeto, tenha certeza de que possui os requisito
 2. Ter o **Git** instalado para pegar os arquivos deste repositório online, link:
 [Git](https://git-scm.com)
 
-##Instalação e Execução
+## Instalação e Execução
 
 Para conseguir instalar e executar este projeto na sua máquina, faça os seguintes comandos:
   
@@ -36,7 +36,7 @@ Para conseguir instalar e executar este projeto na sua máquina, faça os seguin
   npm start
 ```
 
-##Imagens
+## Imagens
 
 ![](/pokedex/public/projeto2.png)
 ![](/pokedex/public/projetoResponsivo.png)
