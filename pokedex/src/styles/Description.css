@@ -11,7 +11,8 @@
 
 .image{
   grid-area: image;
-  align-items: center;
+  width: 30%;
+  justify-content: center;
 }
 .name{
   grid-area: name;
@@ -25,6 +26,13 @@
   width: 5rem;
   height: 2rem;
   text-align: center;
+}
+
+.status:disabled{
+  
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: var(--pokemon-blue);
 }
 
 @media screen and (min-width: 800px){
