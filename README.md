@@ -8,7 +8,7 @@ Framework: <img align="center" alt="Cloud-React" height="30" width="40" src="htt
 
 ## Descrição
 
->O projetoSomoS é uma PokeDex criada para o processo seletivo da **IterisConsultoria**.
+>O projetoSomoS é uma PokeDex criada para um processo seletivo
 >Os participantes do desafio de **_FrontEnd_** deveriam criar uma Pokedex consumindo a famosa API: **PokeApi**
 >Este repositório é de um dos participantes do projeto
 
